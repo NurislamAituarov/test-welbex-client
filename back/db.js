@@ -13,7 +13,7 @@ const poolConfig = process.env.DATABASE_URL
       password: 'postgres',
       host: 'localhost',
       port: 5432,
-      database: 'dcqprfckp19ttb',
+      database: 'dcb-welbex',
     };
 
 const pool = new Pool(poolConfig);
