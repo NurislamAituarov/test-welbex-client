@@ -10,12 +10,13 @@ class Controller {
     res.json(newTable.rows[0]);
   }
   async getTableItems(req, res, next) {
-    try {
-      const table = await db.query(`SELECT * FROM tableItem`);
-      res.json(table.rows);
-    } catch (e) {
-      res.status(500).json('error server');
-    }
+    const table = await db.query(`SELECT * FROM tableItem`);
+    res.json(table.rows);
+    // try {
+
+    // } catch (e) {
+    //   res.status(500).json('error server');
+    // }
   }
 }
 
