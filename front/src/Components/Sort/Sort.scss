@@ -1,0 +1,110 @@
+.sort {
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+.drop-down {
+  width: max-content;
+  display: none;
+  position: absolute;
+  left: -220px;
+  bottom: -220px;
+  padding: 20px 40px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px;
+  div {
+    margin-bottom: 15px;
+  }
+}
+.drop-down__show {
+  display: block;
+  width: 420px;
+  .btn {
+    border: none;
+    background-color: rgb(14, 107, 0);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 12px;
+
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(2, 92, 0);
+    }
+  }
+  .btn-clear {
+    background-color: rgb(183, 0, 0);
+    color: rgb(255, 255, 255);
+    &:hover {
+      background-color: rgb(162, 0, 0);
+    }
+  }
+  input {
+    border: 1px solid rgb(172, 172, 172);
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 20px;
+  }
+}
+.drop-list {
+  background: rgb(180 180 180);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.active-list {
+  transition: all 0.3s;
+  background: black;
+  color: white;
+  box-shadow: -2px 4px 3px 1px rgb(91, 91, 91);
+}
+.condition {
+  justify-content: space-between;
+  gap: 10px;
+  input {
+    padding: 5px 10px;
+    width: 100%;
+  }
+  button {
+    width: 100%;
+  }
+  p {
+    padding: 5px 15px;
+    border-radius: 4px;
+    &:active {
+      background: black;
+      color: white;
+    }
+  }
+}
+.search-str {
+  input {
+    width: 100%;
+  }
+}
+.filter {
+  padding: 5px;
+}
+.active-filter {
+  border-radius: 3px;
+  box-shadow: 0 0 1px 2px rgb(0, 99, 112);
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 300ms;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
